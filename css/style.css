@@ -294,6 +294,20 @@ img {
   border-radius: 0.8rem;
 }
 
+/* ===== About Section ===== */
+#about {
+  background-color: #f9fafb;
+  color: var(--color-dark);
+}
+
+#about .hero-content h1 {
+  color: var(--color-dark);
+}
+
+#about .hero-content p {
+  color: var(--color-text-muted);
+}
+
 /* ===== Section Title ===== */
 .section-title {
   font-size: 2.25rem;

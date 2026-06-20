@@ -23,6 +23,10 @@ body {
   color: var(--color-dark);
   background-color: #FFFFFF;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes up the full height of the viewport */
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -448,7 +452,8 @@ img {
   color: var(--color-light);
   padding: 2rem 1.5rem;
 }
-
+.main-content {
+  flex: 1; /* Forces this section to grow and push the footer down */}
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;

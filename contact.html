@@ -26,21 +26,22 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-content">
-      <!-- ========== ABOUT SECTION ========== -->
-      <section class="hero" id="about">
+      <!-- ========== CONTACT SECTION ========== -->
+      <input type="checkbox" id="order-modal-toggle" class="modal-toggle" hidden />
+      <section class="hero" id="contact" style="background-color: #f9fafb; color: var(--color-dark); padding: 4rem 0;">
         <div class="hero-inner">
-          <div class="hero-content">
-            <h1>About</h1>
-            <p>
-              Founded in 2015, Coffe Shop started as a dream to bring exceptional coffee and community together. Today, we're proud to serve thousands of coffee lovers daily with passion and integrity.
+          <div class="hero-content" style="color: var(--color-dark);">
+            <h1 style="color: var(--color-dark);">Get in Touch</h1>
+            <p style="color: var(--color-text-muted);">
+              We'd love to hear from you! Whether you have questions about our menu, want to book an event, or just want to say hello, reach out to us.
             </p>
+            <label for="order-modal-toggle" class="btn">Send Message</label>
           </div>
-          <div class="hero-image"><img src="images/team-owner.png" alt="Coffee shop owner"></div>
+          <div class="hero-image"><img src="images/map.png" alt="Location map"></div>
         </div>
       </section>
-
-    
 
       <div class="modal-overlay" aria-hidden="true">
         <div class="modal">
@@ -64,27 +65,39 @@
         </div>
       </div>
 
-            <!-- Team Section -->
+      <!-- Contact Information Section -->
       <section class="section container">
-        <h2 class="section-title">Meet Our Team</h2>
-        <div class="grid grid-3">
+        <h2 class="section-title">Our Details</h2>
+        <div class="grid grid-4">
           <article class="card">
-            <div class="team-card-img"><img src="images/team-owner.png" alt="Jessica Chen, Owner"></div>
-            <p><strong>Jessica Chen</strong><br><small>Founder & Owner - Passionate about sourcing the finest beans from around the world</small></p>
+            <div class="card-img" style="background-color: #3882F6; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📍</div>
+            <p><strong>Address</strong><br><small>123 Coffee Street<br>Downtown District<br>New York, NY 10001</small></p>
           </article>
           <article class="card">
-            <div class="team-card-img"><img src="images/team-barista.png" alt="Marcus Johnson, Head Barista"></div>
-            <p><strong>Marcus Johnson</strong><br><small>Head Barista - Expert latte artist with 8+ years of coffee craftsmanship</small></p>
+            <div class="card-img" style="background-color: #3882F6; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📞</div>
+            <p><strong>Phone</strong><br><small>(555) 123-4567<br>Open during business hours</small></p>
           </article>
           <article class="card">
-            <div class="team-card-img"><img src="images/team-chef.png" alt="Elena Rodriguez, Pastry Chef"></div>
-            <p><strong>Elena Rodriguez</strong><br><small>Pastry Chef - Creates fresh pastries and baked goods daily</small></p>
+            <div class="card-img" style="background-color: #3882F6; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📧</div>
+            <p><strong>Email</strong><br><small>hello@brewhaven.com<br>We reply within 24 hours</small></p>
+          </article>
+          <article class="card">
+            <div class="card-img" style="background-color: #3882F6; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🕐</div>
+            <p><strong>Hours</strong><br><small>Mon-Fri: 6:00 AM - 8:00 PM<br>Sat-Sun: 7:00 AM - 9:00 PM</small></p>
           </article>
         </div>
       </section>
-
-
-
+            <!-- Call to Action Section -->
+      <section class="cta-section">
+        <div class="cta-inner">
+          <div class="cta-content">
+            <h2>Join Our Coffee Community</h2>
+            <p>Visit us today and discover why coffee lovers choose Brew Haven!</p>
+          </div>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-inner">

@@ -53,7 +53,7 @@ img {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 4rem;
 }
 
 /* ===== Navigation ===== */
@@ -311,6 +311,7 @@ img {
 .grid {
   display: grid;
   gap: 2rem;
+  justify-content:center;
 }
 
 .grid-4 {
@@ -330,6 +331,9 @@ img {
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
   background-color: #FFFFFF;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -340,7 +344,7 @@ img {
   box-shadow: 0 12px 24px rgba(56, 130, 246, 0.15);
 }
 .team-card-img {
-  width: 100%;
+  width:100%;
   height: 300px;
   background-color: #f3f4f6;
   border-radius: 0.5rem;

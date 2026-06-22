@@ -400,25 +400,23 @@ img {
   color: var(--color-dark);
 }
 
-/* ===== Grid Cards ===== */
 .grid {
   display: grid;
   gap: 2rem;
-  justify-content:center;
+
 }
 
 .grid-4 {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
 }
 
 .grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
 }
 
 .grid-2 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
 }
-
 .card {
   border: 2px solid var(--color-blue);
   border-radius: 0.5rem;
@@ -430,6 +428,11 @@ img {
   background-color: #FFFFFF;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
 }
 
 .card:hover {
@@ -437,8 +440,8 @@ img {
   box-shadow: 0 12px 24px rgba(56, 130, 246, 0.15);
 }
 .team-card-img {
-  width:100%;
-  height: 300px;
+  width: 100%;
+  height: 280px;
   background-color: #f3f4f6;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
@@ -450,8 +453,8 @@ img {
 }
 
 .card-img {
-  width: 100%;
-  height: 200px;
+ width: 100%;
+  height: 220px;
   background-color: #f3f4f6;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
@@ -550,7 +553,7 @@ img {
   padding: 2rem 1.5rem;
 }
 .main-content {
-  flex: 1; /* Forces this section to grow and push the footer down */}
+  flex: 1; /* Forces this section to grow and push the footer down */ }
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -652,14 +655,13 @@ img {
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
-  .hero-image {
-    height: 280px;
-  }
-
   .grid-4,
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: repeat(2, minmax(250px, 350px));
+    justify-content: center;
   }
+}
 
   .hero-inner {
     grid-template-columns: 1fr;
@@ -669,7 +671,7 @@ img {
     flex-direction: column;
     text-align: center;
   }
-}
+
 
 @media (max-width: 768px) {
 
@@ -738,10 +740,11 @@ img {
     height: 160px;
   }
 
-  .grid-4,
+   .grid-4,
   .grid-3,
   .grid-2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    justify-content: center;
   }
 
   .section-title {
@@ -775,6 +778,7 @@ img {
   .order-form textarea {
     padding: 0.85rem 0.95rem;
   }
+}
 }
 
 @media (max-width: 640px) {
@@ -859,9 +863,21 @@ img {
     grid-template-columns: 1fr;
   }
 
+
+}
+@media (max-width: 480px) {
+
+  .grid-4,
+  .grid-3,
+  .grid-2,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+
   .card {
     max-width: 350px;
     margin: 0 auto;
   }
 
-}}
+}

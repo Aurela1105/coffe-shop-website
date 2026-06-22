@@ -694,6 +694,25 @@ img {
   }
 }
 /* ===== Reviews Page ===== */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left; 
+}
+.review-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 2px solid var(--color-blue); 
+}
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -717,13 +736,13 @@ img {
 .review-name {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .review-stars {
   color: #f4b400;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0rem;
 }
 
 .review-text {

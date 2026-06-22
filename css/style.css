@@ -586,11 +586,41 @@ img {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1.5rem;
-    font-size: 0.85rem;
+  .nav-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
   }
-
+   .burger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 60; 
+  }
+    .burger-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+    .nav-links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    width: 100%;
+    background-color: var(--color-dark);
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+    .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
   .hero-content h1 {
     font-size: 1.75rem;
   }

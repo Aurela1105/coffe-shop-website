@@ -33,7 +33,8 @@
       </nav>
     </header>
 
-        <main class="main-content">
+       <main class="main-content">
+  <input type="checkbox" id="order-modal-toggle" class="modal-toggle" hidden>
       <section class="hero" style="background-color: #f9fafb; color: var(--color-dark); padding: 4rem 0;">
         <div class="hero-inner">
           <div class="hero-content" style="color: var(--color-dark);">
@@ -41,7 +42,7 @@
             <p style="color: var(--color-text-muted);">
               Browse our 16 signature coffee creations, from espresso classics to specialty lattes and cold brews. Every cup is crafted with care and fresh ingredients.
             </p>
-            <a href="index.html#contact" class="btn">Order Now</a>
+        <label for="order-modal-toggle" class="btn">Order Now</label>
           </div>
           <div class="hero-image"><img src="images/beans.png" alt="Coffee beans" /></div>
         </div>
@@ -116,26 +117,68 @@
           </article>
         </div>
       </section>
+      <div class="modal-overlay">
+  <div class="modal order-modal">
+    <label for="order-modal-toggle" class="modal-close">×</label>
+
+    <h2>Place Your Order</h2>
+    <p>Fill in your details and choose your coffee.</p>
+
+    <form class="order-form" action="#" method="post">
+      <div class="form-row">
+        <label for="customer-first-name">Name</label>
+        <input type="text" id="customer-first-name" name="first-name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="customer-surname">Surname</label>
+        <input type="text" id="customer-surname" name="surname" placeholder="Your surname" required>
+      </div>
+
+      <div class="form-row">
+        <label for="customer-address">Address</label>
+        <textarea id="customer-address" name="address" placeholder="Your delivery address" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="coffee-product">Product</label>
+        <select id="coffee-product" name="product" required>
+          <option value="">Choose product</option>
+          <option value="espresso">Espresso</option>
+          <option value="cappuccino">Cappuccino</option>
+          <option value="latte">Latte</option>
+          <option value="mocha">Mocha</option>
+          <option value="americano">Americano</option>
+          <option value="flat-white">Flat White</option>
+          <option value="cortado">Cortado</option>
+          <option value="macchiato">Macchiato</option>
+          <option value="affogato">Affogato</option>
+          <option value="iced-coffee">Iced Coffee</option>
+          <option value="cold-brew">Cold Brew</option>
+          <option value="nitro-brew">Nitro Brew</option>
+          <option value="caramel-latte">Caramel Latte</option>
+          <option value="vanilla-latte">Vanilla Latte</option>
+          <option value="irish-coffee">Irish Coffee</option>
+          <option value="spanish-latte">Spanish Latte</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="coffee-quantity">Quantity</label>
+        <input type="number" id="coffee-quantity" name="quantity" min="1" max="20" value="1" required>
+      </div>
+
+      <div class="form-actions">
+        <label for="order-modal-toggle" class="btn btn-secondary">Cancel</label>
+        <button type="submit" class="btn">Send Order</button>
+      </div>
+    </form>
+  </div>
+</div>
     </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Follow Us</h3>
-            <p>📘 Facebook  •  📷 Instagram  •  🐦 Twitter</p>
-          </div>
-          <div class="footer-section">
-            <h3>Quick Links</h3>
-            <p><a href="index.html">Home</a>  •  <a href="menu.html">Menu</a>  •  <a href="index.html#about">About</a>  •  <a href="index.html#contact">Contact</a></p>
-          </div>
-          <div class="footer-section">
-            <h3>Hours</h3>
-            <p>Mon-Fri: 6:00 AM - 8:00 PM<br>Sat-Sun: 7:00 AM - 9:00 PM</p>
-          </div>
-        </div>
-        <p style="text-align: center; margin-top: 2rem; color: var(--color-light);">Copyright © 2026 Brew Haven. All rights reserved.</p>
-      </div>
-    </footer>
+  <footer class="footer">
+  <p>Copyright © 2026 Coffee Shop. All rights reserved.</p>
+</footer>
   </body>
 </html>
